@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load cms_tags static %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+<section class="page-title" style="background-image: url({% static 'img/blog/about.jpg' %});">
+      <div class="full-overlay"></div>
+      <div class="container">
+        <div class="page-title__holder">
+          <h1 class="page-title__title">{%  page_attribute  "page_title"  %}</h1>
+          <p class="lead white">GFIL</p>
+        </div>        
+      </div>
+</section>
+	
+	  <!-- Trending Now --><!-- Featured Posts Grid -->  
+        
+    <section class="featured-posts-grid bg-light">
+      <div class="main-container container mt-40" id="main-container">   
+        {% placeholder "content" %}
+        
+  
+      </div> <!-- end content -->
+    </section> <!-- end main container -->
+{% endblock content %}

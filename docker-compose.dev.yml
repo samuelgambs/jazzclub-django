@@ -1,0 +1,32 @@
+nginx:
+  build: ./deploy
+  volumes:
+    - ./tmp:/var/www
+  links:
+    - django
+  ports:
+    - "80:80"
+
+django:
+  build: .
+  volumes:
+    - .:/usr/src/app/
+    - ./tmp:/var/www
+  environment:
+    - DEBUG=True
+  ports:
+    - "8000:8000"
+  links:
+    - postgres
+  restart: always
+
+postgres:
+  image: postgres:9.5
+  volumes_from:
+    - pgdata
+
+pgdata:
+  image: postgres:9.5
+  command: echo "Data-only container for postgres"
+  volumes:
+    - ./tmp/pgdata:/var/lib/postgresql/data

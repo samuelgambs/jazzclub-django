@@ -1,0 +1,24 @@
+<nav class="sidenav__menu-container">
+<ul class="sidenav__menu" role="menubar">
+	<li >
+		<a href="http://gfil.org.br" class="sidenav__menu-link sidenav__menu-link-category sidenav__menu-link--light-blue">Home</i></a>
+	</li>
+{% load menu_tags %}
+{% for child in children %}
+
+	<li >
+		<a href="{{ child.get_absolute_url }}" class="sidenav__menu-link sidenav__menu-link-category sidenav__menu-link{% if child.selected %}--blue{% endif %}" >{{ child.get_menu_title }}
+	</a>
+{% if child.children %}
+	<button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown">
+            <i class="ui-arrow-down"></i>
+    </button>
+	<ul class="sidenav__menu-dropdown">
+		{% show_menu from_level to_level extra_inactive extra_active "side_submenu.html" "" "" child %}
+    </ul>
+{% endif %}
+</li>
+
+{% endfor %}
+</ul>
+</nav>

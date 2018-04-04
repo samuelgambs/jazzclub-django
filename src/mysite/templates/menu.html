@@ -1,0 +1,17 @@
+<ul class="nav__menu">
+	<li class="nav__dropdown ">
+		<a href=""><i class="fa fa-home"></i></a>
+	</li>
+{% load menu_tags %}
+{% for child in children %}
+
+<li class="nav__dropdown {% if child.selected %}active{% endif %}">
+	<a href="{{ child.get_absolute_url }}">{{ child.get_menu_title }}</a>
+{% if child.children %}
+	<ul class="nav__dropdown-menu">{% show_menu from_level to_level extra_inactive extra_active "submenu.html" "" "" child %}
+</ul>
+{% endif %}
+</li>
+
+{% endfor %}
+</ul>

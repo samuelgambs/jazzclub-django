@@ -1,0 +1,398 @@
+{% extends "base.html" %}
+{% load cms_tags static %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+      
+    <link rel="stylesheet" href="{% static 'css/carousel.css' %}" />
+      <!-- Trending Now --><!-- Featured Posts Grid -->      
+    <section class="featured-posts-grid bg-light">
+      <div class="container clearfix">
+        
+        <!-- Large post slider -->
+        <div class="featured-posts-grid__item featured-posts-grid__item--lg">
+          <div id="owl-hero-grid" class="owl-carousel owl-theme owl-carousel--dots-inside">
+
+            <article class="entry featured-posts-grid__entry">
+              <div class="thumb-bg-holder owl-lazy" data-src="{% static 'img/blog/featured_grid_slide_1.jpg' %}">
+                <img src="{% static 'img/blog/featured_grid_slide_1.jpg' %}" alt="" class="d-none">
+                <a href="#" class="thumb-url"></a>
+                <div class="bottom-gradient"></div>
+              </div>
+
+              <div class="thumb-text-holder">
+                <a href="#" class="entry__meta-category entry__meta-category-color entry__meta-category-color--salad">GFIL</a>   
+                <h2 class="thumb-entry-title">
+                  <a href="#">Comemora 35 anos </a>
+                </h2>
+              </div>
+            </article>
+
+           <!--  <article class="entry featured-posts-grid__entry">
+              <div class="thumb-bg-holder owl-lazy" data-src="{% static 'img/blog/featured_grid_slide_2.jpg' %}">
+                <img src="{% static 'img/blog/featured_grid_slide_2.jpg' %}" alt="" class="d-none">
+                <a href="#" class="thumb-url"></a>
+                <div class="bottom-gradient"></div>
+              </div>
+
+              <div class="thumb-text-holder">
+                <a href="#" class="entry__meta-category entry__meta-category-color entry__meta-category-color--blue">NOT</a>   
+                <h2 class="thumb-entry-title">
+                  <a href="#">BRICS </a>
+                </h2>
+              </div>
+            </article>
+
+            <article class="entry featured-posts-grid__entry">
+              <div class="thumb-bg-holder owl-lazy" data-src="{% static 'img/blog/featured_grid_slide_3.jpg' %}">
+                <img src="{% static 'img/blog/featured_grid_slide_3.jpg' %}" alt="" class="d-none">
+                <a href="#" class="thumb-url"></a>
+                <div class="bottom-gradient"></div>
+              </div>
+
+              <div class="thumb-text-holder">
+                <a href="#" class="entry__meta-category entry__meta-category-color entry__meta-category-color--purple">Tech</a>   
+                <h2 class="thumb-entry-title">
+                  <a href="#">Giant Battery Farm Is Now Live in South Australia</a>
+                </h2>
+              </div>
+            </article> -->
+
+          </div> <!-- end owl slider -->
+            <section class="section mb-20">
+            <div class="title-wrap">
+              <h3 class="section-title section-title--sm">Mais Notícias</h3>
+              <div class="carousel-nav">
+                <button class="carousel-nav__btn carousel-nav__btn--prev" aria-label="previous slide">
+                  <i class="ui-arrow-left"></i>
+                </button>
+                <button class="carousel-nav__btn carousel-nav__btn--next" aria-label="next slide">
+                  <i class="ui-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Slider -->
+            <div id="owl-posts" class="owl-carousel owl-theme">
+              <article class="entry">
+                <div class="entry__img-holder">
+                  <a href="single-post.html">
+                    <div class="thumb-container thumb-75">
+                      <img data-src="img/blog/carousel_img_1.jpg" src="img/blog/carousel_img_1.jpg" class="entry__img owl-lazy" alt="" />
+                    </div>
+                  </a>
+                </div>
+
+                <div class="entry__body">
+                  <div class="entry__header">
+                    <h2 class="entry__title entry__title--sm">
+                      <a href="single-post.html"></a>
+                    </h2>
+                    <ul class="entry__meta">
+                      <li class="entry__meta-date">
+                        <i class="ui-date"></i>
+                        
+                      </li>
+                      <li class="entry__meta-comments">
+                        <i class="ui-comments"></i>
+                        <a href="#"></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <article class="entry">
+                <div class="entry__img-holder">
+                  <a href="single-post.html">
+                    <div class="thumb-container thumb-75">
+                      <img data-src="img/blog/carousel_img_2.jpg" src="img/blog/carousel_img_2.jpg" class="entry__img owl-lazy" alt="" />
+                    </div>
+                  </a>
+                </div>
+
+                <div class="entry__body">
+                  <div class="entry__header">
+                    <h2 class="entry__title entry__title--sm">
+                      <a href="single-post.html"></a>
+                    </h2>
+                    <ul class="entry__meta">
+                      <li class="entry__meta-date">
+                        <i class="ui-date"></i>
+                        
+                      </li>
+                      <li class="entry__meta-comments">
+                        <i class="ui-comments"></i>
+                        <a href="#"></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <article class="entry">
+                <div class="entry__img-holder">
+                  <a href="single-post.html">
+                    <div class="thumb-container thumb-75">
+                      <img data-src="img/blog/carousel_img_3.jpg" src="img/blog/carousel_img_3.jpg" class="entry__img owl-lazy" alt="" />
+                    </div>
+                  </a>
+                </div>
+
+                <div class="entry__body">
+                  <div class="entry__header">
+                    <h2 class="entry__title entry__title--sm">
+                      <a href="single-post.html"></a>
+                    </h2>
+                    <ul class="entry__meta">
+                      <li class="entry__meta-date">
+                        <i class="ui-date"></i>
+                        
+                      </li>
+                      <li class="entry__meta-comments">
+                        <i class="ui-comments"></i>
+                        <a href="#">115</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div> <!-- end slider -->
+
+          </section>
+
+        </div> <!-- end large post slider -->
+
+
+        
+
+        <div class="featured-posts-grid__item featured-posts-grid__item--sm">        
+          <article class="entry featured-posts-grid__entry">
+            <div class="thumb-bg-holder" style="background-image: url({% static 'img/blog/featured_grid_2.jpg' %});">
+              <a href="single-post.html" class="thumb-url"></a>
+              <div class="bottom-gradient"></div>
+            </div>
+
+            
+          </article>
+        </div>
+
+        <div class="featured-posts-grid__item featured-posts-grid__item--sm">   
+         <!-- Fluid width widget -->        
+          <div class="panel panel-info">
+                <div class="panel-heading" style="background-image: none;">
+                  <div class="title-wrap bottom-line bottom-line--blue">
+                    <h3 class="section-title section-title--sm">Eventos</h3>
+                  </div>
+                    
+                </div>
+                <div class="panel-body">
+                    <ul class="media-list">
+                        <li class="media">
+                            <div class="media-left">
+                                <div class="panel panel-info text-center date">
+                                    <div class="panel-heading month">
+                                        <span class="panel-title strong">
+                                            Mar
+                                        </span>
+                                    </div>
+                                    <div class="panel-body day text-danger">
+                                        9
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    Reunião Pública
+                                </h4>
+                                <p>
+                                    Palestras edificantes e instrutivas à luz da Doutrina Espírita e do Evangelho de Jesus.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="media-left">
+                                <div class="panel panel-info text-center date">
+                                    <div class="panel-heading month">
+                                        <span class="panel-title strong">
+                                            Mar
+                                        </span>
+                                    </div>
+                                    <div class="panel-body text-danger day">
+                                        9
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    Evangelização
+                                </h4>
+                                <p>
+                                    Um espaço para a criança aprender, criar laços, ter os ensinos evangélico-doutrinários proporcionais à sua faixa etária e de compreensão.
+                                </p>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                    <a href="/reunioes" class="">Mais eventos »</a>
+                </div>
+            </div>
+            <!-- End fluid width widget -->      
+          
+        </div>
+
+      </div>
+    </section> <!-- end featured posts grid -->
+
+    <div class="main-container container mt-40" id="main-container">         
+
+      <!-- Content -->
+      <div class="row">
+
+        <!-- Posts -->
+        <div class="col-lg-8 blog__content mb-30">
+                  <div class="title-wrap bottom-line bottom-line--blue">
+                    <h3 class="section-title section-title--sm">Localização</h3>
+                  </div>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.230892010862!2d-43.91527018469182!3d-19.914672742976514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69a28dc6f5a93%3A0x2ab790ad92b5fa24!2sGrupo+da+Fraternidade+Esp%C3%ADrita+Irm%C3%A3+L%C3%B3!5e0!3m2!1spt-BR!2sbr!4v1519224350479" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        
+        </div> <!-- end posts -->
+
+        <!-- Sidebar -->
+        <aside class="col-lg-4 sidebar sidebar--right">
+           
+                    
+
+  
+
+        
+
+          <!-- Widget Carousel -->
+
+          <div class="title-wrap bottom-line bottom-line--blue">
+            <h4 class="section-title section-title--sm">Vamos Ajudar?</h4>
+          </div>              
+          <a href="../vamos-ajudar/"><img src="{% static 'img/dar_faz_bem.jpeg' %}">
+          </a>
+          <!-- Latest Reviews -->
+         
+
+          <!-- Widget Tags -->
+         
+
+        </aside> <!-- end sidebar -->
+  
+      </div> <!-- end content -->
+    </div> <!-- end main container -->
+
+	
+	  <!-- Trending Now --><!-- Featured Posts Grid -->      
+    <section class="featured-posts-grid bg-light">
+      <div class="container clearfix">
+        {% placeholder "content" %}
+        
+       
+      </div> <!-- end content -->
+    </section> <!-- end main container -->
+
+    <div class="row row_partner">
+    <div class="container">
+                  <div class="title-wrap bottom-line bottom-line--blue">
+                    <h3 class="section-title section-title--sm">Links Parceiros</h3>
+                  </div>
+
+      <section class="customer-logos slider ">
+        
+        <div class="slide hovereffect">
+          <img src="../static/img/partners/image2.png">
+           <div class="overlay">
+                 <h2>Conselho Espírita Internacional (CEI)</h2>
+                 <a class="info" target="_blank" href="http://cei-spiritistcouncil.com/?lang=pt- pt"><i class="fa fa-link"></i> Ir</a>
+              </div>
+        </div>
+        <div class="slide hovereffect">
+          <img src="../static/img/partners/image3.png">
+           <div class="overlay">
+                 <h2>Denis Soares (Youtube)</h2>
+                 <a class="info" href="https://www.youtube.com/user/denisarroba" target="_blank"><i class="fa fa-link"></i> Ir</a>
+              </div>
+        </div>
+        <div class="slide hovereffect">
+          <img src="../static/img/partners/image4.png">
+           <div class="overlay">
+                 <h2>Federação Espírita Brasileira (FEB)</h2>
+                 <a class="info" href="http://www.febnet.org.br" target="_blank"><i class="fa fa-link"></i> Ir </a>
+              </div>
+        </div>
+        <div class="slide hovereffect">
+          <img class="img-responsive" src="../static/img/partners/image1.png">
+           <div class="overlay">
+                 <h2>Aliança Municipal Espírita de BH (AME-BH)</h2>
+                 <a class="info" href="http://www.amebh.com.br" target="_blank"><i class="fa fa-link"></i> Ir</a>
+              </div>
+        </div>
+        <div class="slide hovereffect">
+          <img src="../static/img/partners/image5.png">
+           <div class="overlay">
+                 <h2>FEB TV</h2>
+                 <a class="info" href="http://www.febtv.com.br" target="_blank"><i class="fa fa-link"></i> Ir</a>
+            </div>
+        </div>
+        <div class="slide hovereffect">
+          <img src="../static/img/partners/image6.png">
+           <div class="overlay">
+                 <h2>Fraternidade Espírita Irmão Glacus (Feig)</h2>
+                 <a class="info" href="http://www.feig.org.br" target="_blank"><i class="fa fa-link"></i> Ir</a>
+            </div>
+        </div>
+        <div class="slide hovereffect">
+          <img src="../static/img/partners/image7.png">
+           <div class="overlay">
+                 <h2>Grupo da Fraternidade Espírita Irmã Scheilla</h2>
+                 <a class="info" href="http://www.gruposcheilla.org.br" target="_blank"><i class="fa fa-link"></i>Ir</a>
+            </div>
+        </div>
+        <div class="slide hovereffect">
+          <img src="../static/img/partners/image8.png">
+           <div class="overlay">
+                 <h2>Grupo da Fraternidade Irmão Wenner (GFIV)</h2>
+                 <a class="info" href="http://gfiwernner.wordpress.com" target="_blank"><i class="fa fa-link"></i>Ir</a>
+            </div>
+        </div>
+        <div class="slide hovereffect">
+          <img src="../static/img/partners/image9.png">
+           <div class="overlay">
+                 <h2>Hospital Espírita André Luiz (Heal)</h2>
+                 <a class="info" href="http://www.heal.org.br" target="_blank"><i class="fa fa-link"></i>Ir</a>
+            </div>
+        </div>
+        <div class="slide hovereffect">
+          <img src="../static/img/partners/image10.png">
+           <div class="overlay">
+                 <h2>Movimento da Fraternidade (Mofra)</h2>
+                 <a class="info" href="http://www.mofra.org.br" target="_blank"><i class="fa fa-link"></i>Ir</a>
+            </div>
+        </div>
+        <div class="slide hovereffect">
+          <img src="../static/img/partners/image11.png">
+           <div class="overlay">
+                 <h2>União Espírita Mineira (UEM)</h2>
+                 <a class="info" href="http://www.uemmg.org.br" target="_blank"><i class="fa fa-link"></i>Ir</a>
+            </div>
+        </div>
+        <div class="slide hovereffect">
+          <img src="../static/img/partners/image12.png">
+           <div class="overlay">
+                 <h2>Viajante do Universo</h2>
+                 <a class="info" href="https://www.viajantedouniverso.org.br"><i class="fa fa-link"></i>Ir</a>
+            </div>
+        </div>
+
+        
+      </section>
+    </div>
+  </div>
+    
+
+
+     
+{% endblock content %}

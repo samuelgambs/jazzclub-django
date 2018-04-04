@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+	
+	  <!-- Trending Now --><!-- Featured Posts Grid -->      
+    <section class="featured-posts-grid bg-light">
+      <div class="container clearfix">
+        {% placeholder "content" %}
+        
+  
+      </div> <!-- end content -->
+    </section> <!-- end main container -->
+{% endblock content %}
